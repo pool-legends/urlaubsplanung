@@ -4,17 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Urlaubswunsch angeben</title>
+    <script src="script.js"></script>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h2>Herzlich Willkommen im Urlaubstool der POOL Legends BER!</h2>
-    <p>Bitte gib zur Anmeldung deinen Benutzernamen (E-Mail-Adresse) und deine Promoter-ID ein.</p>
-    <form action="#">
-        <label for="vorname">Name</label>
-        <br>
-        <input id="vorname" type="text">
-        <label for="vorname">Nachname</label>
-        <br>
-        <input id="nachname" type="text">
-    </form>
+<body onload="heute()">
+    <!-- Navigationbar -->
+    <div class="navbar">
+        <div class="logo">
+          <img id="logo" src="images/logo.png" alt="POOL Legends"/>
+        </div>
+        <nav>
+          <ul>
+          <li><a href="index.html">Übersicht</a></li>
+          <li><b>Urlaubswunsch angeben</b></li>
+          <li><a href="https://www.mystaffpilot.de/login" target="_blank">MYSTAFFPILOT</a></li>
+          </ul>
+          </nav>
+    </div>
+
+    <!-- Formular -->
+    <div class="container">
+        <h2>URLAUBSWUNSCH ANGEBEN</h2>
+        <form action="#">
+            <!-- <div class="grid">
+                <div>
+                    <label for="vorname" class="required">Vorname</label>
+                    <br>
+                    <input id="vorname" type="text" size="35" required>
+                </div>
+                <div>
+                    <label for="nachname" class="required"class="required">Nachname</label>
+                    <br>
+                    <input id="nachname" type="text" size="35" required>
+                </div>
+            </div> -->
+            
+            <div class="grid">
+                <div>
+                    <label for="beginn" class="required">Beginn</label>
+                    <br>
+                    <!-- max value ändern -->
+                    <input type="date" id="beginn" max="2021-11-30" required>
+                </div>
+                <div>
+                    <label for="ende" class="required">Ende</label>
+                    <br>
+                    <!-- max value ändern -->
+                    <input type="date" id="ende" max="2021-11-30" required>
+                </div>
+            </div>
+
+            <label for="zusatzinfo">Zusatzinformation</label>
+            <br>
+            <textarea name="zusatzinfo" id="zusatzinfo"></textarea>
+            <br>
+            <input type="submit">
+        </form>
+    </div>
 </body>
 </html>
